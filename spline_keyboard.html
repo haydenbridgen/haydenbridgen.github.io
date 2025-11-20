@@ -29,8 +29,14 @@
 
         spline.load("https://prod.spline.design/J8wW0BS2QL7FdIqy/scene.splinecode")
             .then(() => {
-                spline.emitEvent("Keydown", "Cube");
+                console.log("Spline loaded");
+
+                window.onmessage = (event) => {
+                console.log("iframe receiving));
+                spline.emitEvent("Keydown");
             });
+            })
     </script>
 </body>
 </html>
+
