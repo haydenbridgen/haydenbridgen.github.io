@@ -32,14 +32,15 @@
                 console.log("Spline loaded");
 
                 window.onmessage = (event) => {
-                if (event.data === "pressdown") {;
-                console.log("iframe receiving);
-                spline.emitEvent("keyDown");
-            });
-        });
+                if (event.data === "pressdown") {
+                console.log("iframe receiving");
+                spline.emitEvent("KeyDown");
+                }
+             };
         });
     </script>
 </body>
 </html>
+
 
 
