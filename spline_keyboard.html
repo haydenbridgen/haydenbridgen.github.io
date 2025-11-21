@@ -22,6 +22,8 @@
     <canvas id="splineCanvas"></canvas>
 
     <script type="module">
+        window.postMessage("pressdown","*");
+
         import { Application } from "https://unpkg.com/@splinetool/runtime@latest/build/runtime.js";
 
         const canvas = document.getElementById("splineCanvas");
@@ -34,13 +36,14 @@
                 window.onmessage = (event) => {
                 if (event.data === "pressdown") {
                 console.log("iframe receiving");
-                spline.emitEvent("KeyDown");
+                spline.emitEvent("keyDown");
                 }
              };
         });
     </script>
 </body>
 </html>
+
 
 
 
